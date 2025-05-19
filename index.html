@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutorial - Prener</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 text-gray-800">
+    <!-- Header fixo -->
+    <header class="fixed top-0 w-full bg-gray-800 text-white z-50 shadow">
+      <div class="flex items-center justify-between px-4 py-3">
+        <h1 class="text-2xl font-bold">Prener</h1>
+        <button id="menuButton" class="md:hidden focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+        <nav id="menu" class="hidden md:flex space-x-4">
+          <a href="#instalacao" class="hover:underline">Instalação</a>
+          <a href="#cadastro" class="hover:underline">Cadastro</a>
+          <a href="#lancamentos" class="hover:underline">Lançamentos</a>
+          <a href="#relatorios" class="hover:underline">Relatórios</a>
+        </nav>
+      </div>
+      <div id="mobileMenu" class="md:hidden hidden px-4 pb-2 space-y-2">
+        <a href="#instalacao" class="block hover:underline">Instalação</a>
+        <a href="#cadastro" class="block hover:underline">Cadastro</a>
+        <a href="#lancamentos" class="block hover:underline">Lançamentos</a>
+        <a href="#relatorios" class="block hover:underline">Relatórios</a>
+      </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main class="pt-24 max-w-3xl mx-auto px-4">
+      <section id="instalacao" class="mb-10">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4">1. Instalação</h2>
+        <p class="mb-4 text-center">Baixe o aplicativo nas lojas oficiais (Google Play / App Store).</p>
+        <img src="imagens/instalacao.png" alt="Tela de instalação" class="mx-auto rounded-md border border-gray-300">
+      </section>
+
+      <section id="cadastro" class="mb-10">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4">2. Cadastro</h2>
+        <p class="mb-4 text-center">Crie sua conta no app usando dados pessoais e e-mail corporativo.</p>
+        <img src="imagens/cadastro.png" alt="Tela de cadastro" class="mx-auto rounded-md border border-gray-300">
+      </section>
+
+      <section id="lancamentos" class="mb-10">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4">3. Lançamentos</h2>
+        <p class="mb-4 text-center">Adicione despesas e receitas com o botão "+" e selecione categorias.</p>
+        <img src="imagens/lancamento.png" alt="Tela de lançamento" class="mx-auto rounded-md border border-gray-300">
+      </section>
+
+      <section id="relatorios" class="mb-10">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4">4. Relatórios</h2>
+        <p class="mb-4 text-center">Acompanhe gráficos e análises mensais na aba de relatórios.</p>
+        <img src="imagens/relatorios.png" alt="Tela de relatórios" class="mx-auto rounded-md border border-gray-300">
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center py-4">
+      <p>&copy; 2025 Prener Engenharia LTDA</p>
+    </footer>
+
+    <!-- Script do menu -->
+    <script>
+      const menuButton = document.getElementById('menuButton');
+      const mobileMenu = document.getElementById('mobileMenu');
+      menuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    </script>
+  </body>
+</html>
